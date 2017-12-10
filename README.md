@@ -1,4 +1,4 @@
 # PubuStream
 RecycleView实现的瀑布流效果
 
-![jietu](D:\AndroidStudioProjects\CrashTest\RecycleviewPubuStream\jietu.jpg)
+![Image text](https://github.com/zhiweiAndroid/PubuStream/blob/master/jietu.jpg)
