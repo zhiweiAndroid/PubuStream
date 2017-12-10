@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +46,8 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         holder.iv.setLayoutParams(layoutParams);
 
         holder.iv.setImageDrawable(ContextCompat.getDrawable(context,images.get(position)));
+//        ImageLoader.getInstance().displayImage(ContextCompat.getDrawable(context,images.get(position)),
+//                holder.iv, NORMAL_OPTION);
         holder.iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,6 +100,12 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         }
     }
 
-
+    public static DisplayImageOptions NORMAL_OPTION = new DisplayImageOptions.Builder()
+            .cacheInMemory(true)
+            .showImageOnLoading(R.mipmap.ic_launcher)
+            .showImageForEmptyUri(R.mipmap.ic_launcher)
+            .showImageOnFail(R.mipmap.ic_launcher)
+            .cacheOnDisc(true)
+            .build();
 
 }

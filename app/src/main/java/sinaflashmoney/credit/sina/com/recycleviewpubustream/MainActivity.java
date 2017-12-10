@@ -1,5 +1,6 @@
 package sinaflashmoney.credit.sina.com.recycleviewpubustream;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements ItemLongClicekLis
     @Override
     public void onClick(RecyclerView.ViewHolder holder,int position) {
         Toast.makeText(this, "点击了第"+position+"条目", Toast.LENGTH_SHORT).show();
-
+      startActivity(new Intent(this,FormActivity.class));
     }
 
     @Override
